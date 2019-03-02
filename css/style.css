@@ -1,13 +1,11 @@
 /*
 Color Palette
-
 red: #7f0b0b
 light gray: #f2f7f6
 light blue / teal: #a8dadc
 queen blue: #457b9d
 navy: #1d3557
 gold: #c1a42e
-
 */
 
 html, body {
@@ -50,6 +48,7 @@ html, body {
 	color: #c1a42e;
 }
 
+/*
 #homeBanner {
 	display: table;
 	height: 100%;
@@ -58,10 +57,53 @@ html, body {
 	background-size: cover;
 	background-color: red;	
 }
-
 .parallaxBanner {
     height: 100%;
 	width: 100%;
 	background: transparent;
 }
+*/
+
+
+#bannerContainer {
+	width: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -960px;
+	margin-top: -100px;
+    z-index: 0;
+}
+
+#bannerContainer img {
+	display: block;
+    margin: 0 auto;
+}
+
+
+
+
+#wrapper {
+    max-width: 100%;
+	max-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*
+#wrapper .slides_container {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -960px;
+    z-index: 0;
+}
+#wrapper .slide + .slide {
+    display: none;
+}
+#wrapper img {
+    display: block;
+    margin: 2px auto;
+}*/
+
+
+
 
