@@ -1,51 +1,80 @@
 
-$(window).scroll(function () {
-  if ($(window).width() > 550) {
-    if ($(window).scrollTop() > $(window).height() - 46) {
-      $('#nav-bar').addClass('navbar-fixed');
-      $('#body-div').css('margin-top', 46 + 'px')
-    }
-    else {
-      $('#nav-bar').removeClass('navbar-fixed');
-      $('#body-div').css('margin-top', 0 + 'px')
-    }
-  }
-});
 
-if ($(window).width() <= 550) {
-  $('#nav-bar').addClass('navbar-fixed');
-}
-else {
-  $('#nav-bar').removeClass('navbar-fixed');
-}
+// TODO: Clean up all this code
+//       things can be consolidated into single functions
 
-$(window).resize(function () {
+
+$(function() {
   if ($(window).width() <= 550) {
     $('#nav-bar').addClass('navbar-fixed');
   }
   else {
     $('#nav-bar').removeClass('navbar-fixed');
   }
-});
 
-$(".nav-item").click(function (e) {
-  e.preventDefault();
-  $('html, body').animate({
-  scrollTop: $(this.hash).offset().top
-  }, 800);
-});
+  $('.nav-item').click(function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 800);
+  });
 
-$(document).scroll(function () {
-  var scrollPosition = $(document).scrollTop();
+  $('#hamburger-icon').click(function () {
+    $('#nav-links').css('max-height', 500 + 'px');
+    $('#hamburger-icon').css('display', 'none');
+    $('#close-icon').css('display', 'block');
+  });
 
-  $('section').each(function (i) {
-    if ($(this).position().top <= scrollPosition + 50) {
-      $('a.active').removeClass('active');
-      $('a').eq(i+1).addClass('active');
+  $('#close-icon').click(function () {
+    $('#nav-links').css('max-height', 0);
+    $('#hamburger-icon').css('display', 'block');
+    $('#close-icon').css('display', 'none');
+  })
+
+  $(window).scroll(function () {
+    if ($(window).width() > 550) {
+      if ($(window).scrollTop() > $(window).height() - 46) {
+        $('#nav-bar').addClass('navbar-fixed');
+        $('#body-div').css('margin-top', 46 + 'px');
+      }
+      else {
+        $('#nav-bar').removeClass('navbar-fixed');
+        $('#body-div').css('margin-top', 0 + 'px')
+      }
     }
   });
-  if (scrollPosition + 50 <= $('#about-me').position().top) {
-    $('a.active').removeClass('active');
-    $('a').eq(0).addClass('active');
-  }
+
+  $(window).resize(function () {
+    if ($(window).width() > 550) {
+      $('#hamburger-icon').css('display', 'none');
+      $('#close-icon').css('display', 'none');
+      $('#nav-links').css('max-height', 0);
+    }
+    else {
+      if ($('#close-icon').css('display') !== 'block') {
+        $('#hamburger-icon').css('display', 'block');
+      }
+    }
+    if ($(window).width() <= 550 || $(window).scrollTop() > $(window).height() - 46) {
+      $('#nav-bar').addClass('navbar-fixed');
+    }
+    else {
+      $('#nav-bar').removeClass('navbar-fixed');
+    }
+  });
+
+  $(document).scroll(function () {
+    var scrollPosition = $(document).scrollTop();
+
+    $('section').each(function (i) {
+      if ($(this).position().top <= scrollPosition + 50) {
+        $('a.active').removeClass('active');
+        $('a').eq(i+1).addClass('active');
+      }
+    });
+    if (scrollPosition + 50 <= $('#about-me').position().top) {
+      $('a.active').removeClass('active');
+      $('a').eq(0).addClass('active');
+    }
+  });
 });

@@ -8,6 +8,11 @@ navy: #1d3557
 gold: #c1a42e
 */
 
+/*
+green: #1f5255;
+red: #7D2835
+*/
+
 html, body {
     height: 100%;
     width: 100%;
@@ -55,30 +60,47 @@ p, h1, h2 {
     margin-bottom: 0;
     text-align: center;
     width: 100%;
+    height: 4.6rem;
 }
 
-.nav-links {
+#nav-links {
     margin: 0;
 }
 
-.nav-links li {
+#nav-links li {
     display: inline-block;
     padding: 1.2rem 1.5rem 1.2rem 1.5rem;
 }
 
 .nav-item {
-    color: white; /* #3498db */
+    color: #c9c9c9; /* #3498db */
     text-decoration: none;
     font-size: 1.8rem;
     font-family: 'Montserrat', sans-serif;
 }
 
 .nav-item:hover {
-    color: #457b9d;
+    color: white;
 }
 
 .active {
-    color: #457b9d;
+    color: #d9485e; /* #457b9d */ 
+}
+
+.active:hover {
+    color: #d9485e;
+}
+
+#hamburger-icon, #close-icon {
+    display: none;
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem 0 1rem 0;
+}
+
+#hamburger-icon:hover, #close-icon:hover {
+    color: #d9485e;
+    cursor: pointer;
 }
 
 
@@ -88,14 +110,16 @@ p, h1, h2 {
     width: 100%;
     position: relative;
     left: 50%;
-    margin-left: -933px;
-    margin-top: -300px;
+    margin-left: -1000px;
+    margin-top: -1000px;
     z-index: 0;
 }
 
 #banner-container img {
     display: block;
     margin: 0 auto;
+    width: 2400px;
+    height: auto;
 }
 
 .testing-middle {
@@ -126,11 +150,26 @@ section {
     z-index: 1;
 }
 
+
 .gray-background {
     background-color: #f2f7f6;
-    -webkit-box-shadow: 0px 3px 8px #e0e0e0, 0px -3px 8px #e0e0e0;
-            box-shadow: 0px 3px 8px #e0e0e0, 0px -3px 8px #e0e0e0;
+    -webkit-box-shadow: 0px 3px 8px #ab3a4b, 0px -3px 8px #ab3a4b;
+            box-shadow: 0px 3px 8px #ab3a4b, 0px -3px 8px #ab3a4b;
     z-index: 2;
+}
+
+/*
+.red-background {
+    background-color: #820a1d;
+    color: black;
+    -webkit-box-shadow: 0px 3px 8px #ab3a4b, 0px -3px 8px #ab3a4b;
+            box-shadow: 0px 4px 8px #ab3a4b, 0px -3px 8px #ab3a4b;
+    z-index: 2;
+}
+*/
+
+.testing-stuff {
+    background-color: white;
 }
 
 .text-center {
@@ -157,7 +196,7 @@ h2.small-header {
     width: 10rem;
     height: 2px;
     margin: 2rem 0 2rem 0;
-    background-color: #a8dadc; /* #619e92 */
+    background-color: #ab3a4b; /* #619e92 */
 }
 
 p.section-text {
@@ -166,7 +205,10 @@ p.section-text {
 }
 
 ul.skills-list {
-    padding-left: 3rem;
+    display: inline-block;
+    text-align: left;
+    padding-inline-start: 0;
+    margin-left: auto;
 }
 
 li.skills-item {
@@ -217,9 +259,10 @@ li.skills-item {
         width: 100%;
     }
 
+/*
     .col-1-4 {
         width: 50%;
-    }
+    }*/
 
     .mobile-hide {
         display: none;
@@ -229,12 +272,6 @@ li.skills-item {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media(min-height: 700px) {
-    #banner-container {
-        margin-top: 0;
     }
 }
 
@@ -248,6 +285,25 @@ li.skills-item {
     #nav-bar {
         display: none;
     }*/
+
+    #nav-links {
+        background-color: #202020;
+        max-height: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        -webkit-transition: max-height 0.5s ease-in-out;
+           -moz-transition: max-height 0.5s ease-in-out;
+                transition: max-height 0.5s ease-in-out;
+        padding-left: 0;
+    }
+
+    #nav-links li {
+        display: block;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
 
     #banner-wrapper {
         max-height: 100%;
