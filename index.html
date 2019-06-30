@@ -10,7 +10,7 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300400,500" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
 
@@ -25,11 +25,14 @@
 <body>
 	<div id="banner-wrapper">
 		<div id="banner-container">
-			<img src="./images/IMG_0662.jpg">
+			<img src="./images/portfolio-bg.png">
 		</div>
-		<div class="testing-middle">
-	  		Sample Text<br>
-	  		Put some links/icons here
+		<div id="banner-text-container">
+	  		<p>kian&nbsp; thompson</p>
+	  		<div id="banner-icons">
+	  			<a href="https://github.com/kianthompson" target="_blank"><i class="fab fa-github-square"></i></a>
+	  			<a href="https://www.linkedin.com/in/kian-thompson-1b8579176" target="_blank"><i class="fab fa-linkedin"></i></a>
+	  		</div>
 	  	</div>
 	</div>
 
@@ -48,9 +51,7 @@
 	<div id="body-div">
 		<section id="about-me" class="white-background">
 			<div class="content-column col-1-3 mobile-hide">
-				<p class="section-text">
-					Picture
-				</p>
+				<img id="about-photo" src="./images/about-me.jpg">
 			</div>
 			<div class="content-column col-2-3">
 				<h1 class="section-header mobile-center">
@@ -63,48 +64,60 @@
 				</p>
 			</div>
 		</section>
+
+		<div class="section-divider"></div>
+
 		<section id="skills" class="gray-background">
 			<div class="content-column col-1-1">
 				<h1 class="section-header text-center">
 					SKILLS
 				</h1>
-				<div class="header-underline text-center">
+				<div class="header-underline text-center"></div>
+				<p class="section-text text-center">
+					Throughout my many years of programming I have used a variety of languages, frameworks, and tools. I have recently been using various web languages and frameworks, such as HTML5, CSS3, TypeScript, SQL, and Angular. However, most of my experience lies in standard programming languages such as Python, Java, and C++.
+				</p>
+			</div>
+			<div class="content-column col-1-3 text-center">
+				<div class="section-card">
+					<h2 class="small-header">LANGUAGES</h2>
+					<ul class="skills-list">
+						<li class="skills-item">Python</li>
+						<li class="skills-item">Java</li>
+						<li class="skills-item">C++</li>
+						<li class="skills-item">SQL / MySQL</li>
+						<li class="skills-item">C#</li>
+						<li class="skills-item">C</li>
+					</ul>
 				</div>
 			</div>
 			<div class="content-column col-1-3 text-center">
-				<h2 class="small-header">LANGUAGES</h2>
-				<ul class="skills-list">
-					<li class="skills-item">SAMPLE DATA</li>
-					<li class="skills-item">Python</li>
-					<li class="skills-item">Java</li>
-					<li class="skills-item">C++</li>
-					<li class="skills-item">SQL</li>
-					<li class="skills-item">C#.NET</li>
-					<li class="skills-item">C</li>
-				</ul>
+				<div class="section-card">
+					<h2 class="small-header">WEB</h2>
+					<ul class="skills-list">
+						<li class="skills-item">HTML5</li>
+						<li class="skills-item">CSS3</li>
+						<li class="skills-item">TypeScript</li>
+						<li class="skills-item">JavaScript</li>
+						<li class="skills-item">jQuery</li>
+					</ul>
+				</div>
 			</div>
 			<div class="content-column col-1-3 text-center">
-				<h2 class="small-header">WEB STUFF</h2>
-				<ul class="skills-list">
-					<li class="skills-item">SAMPLE DATA</li>
-					<li class="skills-item">HTML5</li>
-					<li class="skills-item">CSS3</li>
-					<li class="skills-item">Angular</li>
-					<li class="skills-item">typescript</li>
-					<li class="skills-item">javascript</li>
-					<li class="skills-item">jQuery</li>
-				</ul>
-			</div>
-			<div class="content-column col-1-3 text-center">
-				<h2 class="small-header">OTHER</h2>
-				<ul class="skills-list">
-					<li class="skills-item">SAMPLE DATA</li>
-					<li class="skills-item">GIT / Version Control</li>
-					<li class="skills-item">Angular</li>
-					<li class="skills-item">Scrum</li>
-				</ul>
+				<div class="section-card">
+					<h2 class="small-header">OTHER</h2>
+					<ul class="skills-list">
+						<li class="skills-item">ASP.NET</li>
+						<li class="skills-item">Angular</li>
+						<li class="skills-item">Bootstrap 4</li>
+						<li class="skills-item">Git</li>
+						<li class="skills-item">Scrum</li>
+					</ul>
+				</div>
 			</div>
 		</section>
+
+		<div class="section-divider"></div>
+
 		<section id="projects" class="white-background">
 			<div class="content-column col-1-1">
 				<h1 class="section-header text-center">
@@ -112,38 +125,116 @@
 				</h1>
 				<div class="header-underline text-center"></div>
 			</div>
-			<div class="content-column col-1-2">
-				<p class="section-text">
-					Project #1
-				</p>
+			<div class="content-column col-1-2 text-center">
+				<div class="section-card">
+					<img src="./images/okr.png">
+					<div class="bottom">
+						<h2 class="small-header">
+							SCES OKRs
+						</h2>
+						<div class="header-underline text-center"></div>
+						<table class="tech-used">
+							<tr>
+								<td>Front-End</td>
+								<td>HTML, CSS, TypeScript, jQuery, Angular</td>
+							</tr>
+							<tr>
+								<td>Back-End</td>
+								<td>C#, ASP.NET, SQL, AWS</td>
+							</tr>
+						</table>
+						<div class="project-buttons">
+							<a href="https://okr.studentcenter.uci.edu/" target="_blank">WEBSITE</a>
+							<p class="section-text">
+								* Private Repository
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="content-column col-1-2">
-				<p class="section-text">
-					Project #2
-				</p>
+			<div class="content-column col-1-2 text-center">
+				<div class="section-card">
+					<img src="./images/cadc-website.png">
+					<div class="bottom">
+						<h2 class="small-header">
+							CADC
+						</h2>
+						<div class="header-underline text-center"></div>
+						<table class="tech-used">
+							<tr>
+								<td>Technologies Used</td>
+								<td>HTML, CSS, JavaScript, Bootstrap</td>
+							</tr>
+						</table>
+						<div class="project-buttons">
+							<a href="http://cadcuci.net/cadc/" target="_blank">WEBSITE</a>
+							<a href="https://github.com/kianthompson/CADC_Website" target="_blank">REPO</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="content-column col-1-2">
-				<p class="section-text">
-					Project #3
-				</p>
+			<div class="content-column col-1-2 text-center">
+				<div class="section-card">
+					<img src="./images/movie-site.png">
+					<div class="bottom">
+						<h2 class="small-header">
+							Movie Website
+						</h2>
+						<div class="header-underline text-center"></div>
+						<table class="tech-used">
+							<tr>
+								<td>Technologies Used</td>
+								<td>HTML, CSS, JavaScript, jQuery, Ajax, Java, MySQL, AWS, Tomcat, Android Studio</td>
+							</tr>
+						</table>
+						<div class="project-buttons">
+							<a href="https://github.com/kianthompson/movie-website" target="_blank">REPO</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="content-column col-1-2">
-				<p class="section-text">
-					Project #4
-				</p>
+			<div class="content-column col-1-2 text-center">
+				<div class="section-card">
+					<img src="./images/search-engine.png">
+					<div class="bottom">
+						<h2 class="small-header">
+							I&CS Search
+						</h2>
+						<div class="header-underline text-center"></div>
+						<table class="tech-used">
+							<tr>
+								<td>Technologies Used</td>
+								<td>Python</td>
+							</tr>
+						</table>
+						<div class="project-buttons">
+							<a href="https://github.com/kianthompson/search-engine" target="_blank">REPO</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
+
+		<div class="section-divider"></div>
+
 		<section id="contact" class="gray-background">
-			<div class="content-column col-1-2">
+			<div class="content-column col-1-3">
 				<h1 class="section-header">
 					CONTACT ME
 				</h1>
 				<div class="header-underline"></div>
 			</div>
-			<div class="content-column col-1-2">
+			<div class="content-column col-2-3">
 				<p class="section-text">
-					Some stuff here
+					kian.s.thompson@gmail.com<br>
 				</p>
+				<p class="section-text">
+					+1 949 439 8834
+				</p>
+				<div id="contact-icons">
+		  			<a href="https://github.com/kianthompson" target="_blank"><i class="fab fa-github-square"></i></a>
+	  				<a href="https://www.linkedin.com/in/kian-thompson-1b8579176" target="_blank"><i class="fab fa-linkedin"></i></a>
+	  			</div>
 			</div>
 		</section>
 	</div>

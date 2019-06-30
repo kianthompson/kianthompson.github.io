@@ -68,13 +68,13 @@ $(function() {
 
     $('section').each(function (i) {
       if ($(this).position().top <= scrollPosition + 50) {
-        $('a.active').removeClass('active');
-        $('a').eq(i+1).addClass('active');
+        $('#nav-links a.active').removeClass('active');
+        $('#nav-links a').eq(i+1).addClass('active');
       }
     });
     if (scrollPosition + 50 <= $('#about-me').position().top) {
-      $('a.active').removeClass('active');
-      $('a').eq(0).addClass('active');
+      $('#nav-links a.active').removeClass('active');
+      $('#nav-links a').eq(0).addClass('active');
     }
   });
 });
