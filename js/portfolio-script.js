@@ -5,7 +5,7 @@
 
 
 $(function() {
-  if ($(window).width() <= 550) {
+  if (window.innerWidth <= 550) {
     $('#nav-bar').addClass('navbar-fixed');
   }
   else {
@@ -45,7 +45,7 @@ $(function() {
   });
 
   $(window).resize(function () {
-    if ($(window).width() > 550) {
+    if (window.innerWidth > 550) {
       $('#hamburger-icon').css('display', 'none');
       $('#close-icon').css('display', 'none');
       $('#nav-links').css('max-height', 0);
@@ -55,7 +55,7 @@ $(function() {
         $('#hamburger-icon').css('display', 'block');
       }
     }
-    if ($(window).width() <= 550 || $(window).scrollTop() > $(window).height() - 46) {
+    if (window.innerWidth <= 550 || $(window).scrollTop() > $(window).height() - 46) {
       $('#nav-bar').addClass('navbar-fixed');
     }
     else {
