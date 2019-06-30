@@ -370,6 +370,11 @@ li.skills-item {
     padding-top: 2rem;
 }
 
+#contact p a {
+    text-decoration: none;
+    color: #000000;
+}
+
 #contact-icons {
     padding-top: 2rem;
     font-size: 4rem;
