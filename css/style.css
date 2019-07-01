@@ -45,13 +45,13 @@ p, h1, h2 {
     position: relative;*/
     font-family: 'Roboto', sans-serif;
 }
-
+/*
 #banner {
     width: 100%;
     height: calc(100% - 4.6rem);
     background-color: gray;
     overflow: hidden;
-}
+}*/
 
 #nav-bar {
     border: 0;
@@ -105,6 +105,12 @@ p, h1, h2 {
 
 
 
+#banner-wrapper {
+    max-width: 100%;
+    max-height: calc(100% - 4.6rem);
+    margin: 0 auto;
+    overflow: hidden;
+}
 
 #banner-container {
     width: 100%;
@@ -154,14 +160,6 @@ p, h1, h2 {
 
 #banner-icons i:last-child {
     margin-left: 2rem;
-}
-
-
-#banner-wrapper {
-    max-width: 100%;
-    max-height: calc(100% - 4.6rem);
-    margin: 0 auto;
-    overflow: hidden;
 }
 
 
@@ -293,7 +291,11 @@ li.skills-item {
     box-shadow: 0px 3px 8px #000000;
     border-radius: 40px;
     box-sizing: border-box;
-    margin: 3rem auto 3rem auto;
+    margin: 3rem auto 6rem auto;
+}
+
+#projects .section-card:last-child {
+    margin-bottom: 3rem;
 }
 
 #projects .section-card img {
@@ -365,6 +367,8 @@ li.skills-item {
     padding-top: 1rem;
 }
 
+
+
 #contact div:first-child {
     text-align: right;
     padding-right: 4rem;
@@ -381,6 +385,11 @@ li.skills-item {
 #contact p a {
     text-decoration: none;
     color: #000000;
+    transition: color 0.5s;
+}
+
+#contact p a:hover {
+    color: #ab3a4b;
 }
 
 #contact-icons {
