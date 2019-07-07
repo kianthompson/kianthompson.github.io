@@ -1,16 +1,6 @@
 /*
-Color Palette
-red: #7f0b0b
-light gray: #f2f7f6
-light blue / teal: #a8dadc
-queen blue: #457b9d
-navy: #1d3557
-gold: #c1a42e
-*/
-
-/*
-green: #1f5255;
-red: #7D2835
+Styling for Kian Thompson's portfolio
+www.kianthompson.com
 */
 
 html, body {
@@ -25,6 +15,8 @@ p, h1, h2 {
     margin: 0;
 }
 
+
+/* Navbar Styling */
 #collapse-navbar {
     display: none;
     width: 100%;
@@ -40,18 +32,6 @@ p, h1, h2 {
     width: 100%;
 }
 
-#body-div {
-    /*top: 0;
-    position: relative;*/
-    font-family: 'Roboto', sans-serif;
-}
-/*
-#banner {
-    width: 100%;
-    height: calc(100% - 4.6rem);
-    background-color: gray;
-    overflow: hidden;
-}*/
 
 #nav-bar {
     border: 0;
@@ -73,7 +53,7 @@ p, h1, h2 {
 }
 
 .nav-item {
-    color: #c9c9c9; /* #3498db */
+    color: #c9c9c9;
     text-decoration: none;
     font-size: 1.8rem;
     font-family: 'Montserrat', sans-serif;
@@ -84,7 +64,7 @@ p, h1, h2 {
 }
 
 .active {
-    color: #d9485e; /* #457b9d */ 
+    color: #d9485e;
 }
 
 .active:hover {
@@ -104,7 +84,7 @@ p, h1, h2 {
 }
 
 
-
+/* Image Banner Styling */
 #banner-wrapper {
     max-width: 100%;
     max-height: calc(100% - 4.6rem);
@@ -163,6 +143,11 @@ p, h1, h2 {
 }
 
 
+/* General Styling */
+#body-div {
+    font-family: 'Roboto', sans-serif;
+}
+
 section {
     font-size: 0;
     padding-top: 10rem;
@@ -177,8 +162,6 @@ section {
 
 .gray-background {
     background-color: #f2f7f6;
-    /*-webkit-box-shadow: 0px 3px 8px #5c5c5c, 0px -3px 8px #5c5c5c;
-            box-shadow: 0px 3px 8px #5c5c5c, 0px -3px 8px #5c5c5c; */
     z-index: 2;
 }
 
@@ -186,22 +169,6 @@ section {
     width: 100%;
     height: 2px;
     background-color: #5c5c5c;;
-}
-
-/*
-.red-background {
-    background-color: #ab3a4b;
-    color: black;
-    -webkit-box-shadow: 0px 3px 8px #5c5c5c, 0px -3px 8px #5c5c5c;
-            box-shadow: 0px 4px 8px #5c5c5c, 0px -3px 8px #5c5c5c;
-
-    z-index: 2;
-}
-*/
-
-
-.testing-stuff {
-    background-color: white;
 }
 
 .text-center {
@@ -220,7 +187,6 @@ h2.small-header {
     font-size: 2.5rem;
     letter-spacing: 0.4rem;
     font-weight: 400;
-    /*padding-top: 4rem;*/
     padding-bottom: 1rem;
 }
 
@@ -228,9 +194,16 @@ h2.small-header {
     width: 10rem;
     height: 2px;
     margin: 2rem 0 2rem 0;
-    background-color: #ab3a4b; /* #619e92 */
+    background-color: #ab3a4b;
 }
 
+p.section-text {
+    font-size: 2.1rem;
+    font-weight: 200;
+}
+
+
+/* About Section Styling */
 #about-photo {
     display: block;
     width: 80%;
@@ -242,11 +215,34 @@ h2.small-header {
     box-shadow: 0px 3px 8px #000000;
 }
 
-p.section-text {
-    font-size: 2.1rem;
-    font-weight: 200;
+#resume-button-container a {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 2px solid #ab3a4b;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #ab3a4b;
+    -webkit-transition: top 0.13s linear;
+       -moz-transition: top 0.13s linear;
+            transition: top 0.13s linear;
 }
 
+#resume-button-container a:hover {
+    color: #ab3a4b;
+    top: -5px;
+    -webkit-transition: top 0.13s linear;
+       -moz-transition: top 0.13s linear;
+            transition: top 0.13s linear;
+}
+
+
+/* Skills Section Styling */
 #skills .content-column {
     padding: 0;
 }
@@ -283,7 +279,7 @@ li.skills-item {
 }
 
 
-
+/* Projects Section Styling */
 #projects .section-card {
     width: 100%;
     min-width: 300px;
@@ -368,7 +364,7 @@ li.skills-item {
 }
 
 
-
+/* Contact Section Styling */
 #contact div:first-child {
     text-align: right;
     padding-right: 4rem;
@@ -409,14 +405,15 @@ li.skills-item {
     transition: color 0.5s;
 }
 
+
+/* Responsive Styling */
 .content-column {
     box-sizing: border-box;
-    display: inline-block; /* table-cell */
+    display: inline-block;
     vertical-align: top;
     padding-left: 5rem;
     padding-right: 5rem;
 }
-
 
 .col-1-1 {
     display: block !important;
@@ -446,11 +443,9 @@ li.skills-item {
 
 @media(max-width: 768px) {
 
-    /* col-1-2, .col-1-3, .col-2-3 */
     .content-column {
         width: 100%;
     }
-
 
     #projects .col-1-2 {
         padding-left: 1rem;
@@ -470,11 +465,6 @@ li.skills-item {
         float: none;
     }
 
-/*
-    .col-1-4 {
-        width: 50%;
-    }*/
-
     .mobile-hide {
         display: none;
     }
@@ -491,15 +481,6 @@ li.skills-item {
 }
 
 @media(max-width: 550px) {
-
-/*
-    #collapse-navbar {
-        display: block;
-    }
-
-    #nav-bar {
-        display: none;
-    }*/
 
     #nav-links {
         background-color: #202020;
