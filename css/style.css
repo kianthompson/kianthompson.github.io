@@ -363,6 +363,19 @@ li.skills-item {
     padding-top: 1rem;
 }
 
+/* Experience Section styling */
+#experience .experience-section {
+	width: 100%;
+	margin: 3rem auto 6rem auto;
+}
+
+#experience .experience-section:last-child {
+    margin-bottom: 3rem;
+}
+
+#experience h2.small-header {
+    letter-spacing: 0.1rem;
+}
 
 /* Contact Section Styling */
 #contact div:first-child {
@@ -372,10 +385,6 @@ li.skills-item {
 
 #contact div .header-underline {
     float: right;
-}
-
-#contact p:first-child {
-    padding-bottom: 2rem;
 }
 
 #contact p a {
